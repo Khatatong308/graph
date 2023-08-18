@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <h1 style="background-color:powderblue; text-align: center;">Portfolio</h1>
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  </head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <link rel="stylesheet" href="grah.css">
+  
+<body >
+  <div class="o"  id="myPlot"></div> 
+  <canvas id="myChart" style="width:100%;max-width:700px;"  ></canvas> 
+  <script>
+    var xValues = ["กิน", "นอน", "ทำงาน", "เล่นมือถือ", "เล่นกีฬา"];
+    var yValues = [30, 40, 10, 10, 10];
+    var barColors = [
+      "#b91d47",
+      "#00aba9",
+      "#2b5797",
+      "#e8c3b9",
+      "#1e7145"
+    ];
+    
+    new Chart("myChart", {
+      type: "pie",
+      data: {
+        labels: xValues,
+        datasets: [{
+          backgroundColor: barColors,
+          data: yValues
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "กิจวัตประจำวัน"
+        }
+      }
+    });
+</script>
+<div class="u" id="myPlot" style="width:100%;max-width:700px;"></div>
+
+<script>
+const xArray = [10000, 2000, 1500,700, 200];
+const yArray = ["วันศุกร์ ", "วันพฤหัสบดี ", "วันพุธ ", "อังคาร" ,"วันจันทร์"]
+
+const data = [{
+  x:xArray,
+  y:yArray,
+  type:"bar",
+  orientation:"h",
+  marker: {color:"rgba(255,0,0,0.6)"}
+}]
+
+const layout = {title:"ตังในบัญชี"};
+
+Plotly.newPlot("myPlot", data, layout);
+</script>
+  
+    <link rel="stylesheet" href="grah.js">
+<br>
+
+
+</body>
+<body>
+  <div class="j" id="my" ></div>
+
+  <script>
+  const xl = ["2019", "2020", "2021", "2022", "2023"];
+  const yl = [65, 67, 65, 63, 61];
+  
+  const data2 = [{
+    x:xl,
+    y:yl,
+    type:"bar",
+    orientation:"v",
+    marker: {color:"rgba(0,0,255,0.6)"}
+  }];
+  
+  const layouty = {title:"น้ำหนักในแต่ละปี"};
+  
+  Plotly.newPlot("my", data2, layouty);
+  </script>
+    <div id="donut" style="width:100%;max-width:700px"></div>
+
+    <script>
+    const jaja = ["วิศวะ", "เขียนโปรแกรม", "ภาษาอังกฤษ", "คณิต", "โครงสร้างอัลกอลึทึม"];
+    const keke = [20, 20, 20, 20, 20];
+    
+    const layout20 = {title:"วิชาที่ชอบ"};
+    
+    const datalo = [{labels:jaja, values:keke, hole:.4, type:"pie"}];
+    
+    Plotly.newPlot("donut", datalo, layout20);
+    </script>
+</html>
+
